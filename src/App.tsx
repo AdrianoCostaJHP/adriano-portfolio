@@ -1,8 +1,8 @@
-import { Box, ThemeProvider } from "@mui/material";
-import { customTheme } from "./common/theme";
-import { FormattedMessage, IntlProvider } from "react-intl";
-import en from "./lang/en.json";
-import pt from "./lang/pt.json";
+import { Box, ThemeProvider } from '@mui/material';
+import { customTheme } from 'src/common/theme';
+import { FormattedMessage, IntlProvider } from 'react-intl';
+import en from './lang/en.json';
+import pt from './lang/pt.json';
 
 type MessageProps = {
   [key: string]: {
@@ -11,15 +11,14 @@ type MessageProps = {
 };
 
 function App() {
-  const locale = navigator.language.split("-")?.[0];
+  const locale = navigator.language.split('-')?.[0];
   const enMessages = { ...en };
   const brMessages = { ...pt };
 
   const locales: MessageProps = {
-    ["en"]: enMessages,
-    ["pt"]: brMessages,
+    en: enMessages,
+    pt: brMessages,
   };
-
 
   return (
     <>
