@@ -1,18 +1,15 @@
-import { Box, ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { customTheme } from 'src/common/theme';
-import { FormattedMessage } from 'react-intl';
 import LanguageProvider from './LanguageProvider';
+import Router from './Router';
 
 function App() {
   return (
     <>
       <ThemeProvider theme={customTheme}>
+        <CssBaseline />
         <LanguageProvider>
-          <Box bgcolor="red" p={3}>
-            <p>
-              <FormattedMessage id="label.user" />
-            </p>
-          </Box>
+          <Router />
         </LanguageProvider>
       </ThemeProvider>
     </>
